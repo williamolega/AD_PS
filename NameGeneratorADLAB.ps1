@@ -1,7 +1,7 @@
 # ----- Edit these Variables for your own Use Case ----- #
 $PASSWORD_FOR_USERS            = "Password1"
 $NUMBER_OF_ACCOUNTS_TO_CREATE  = 1000
-$OU_PATH                       = "OU=Users,OU=USA,$(([ADSI]'').distinguishedName)"
+$OU_PATH                       = "OU=Users,OU=Employees,$(([ADSI]'').distinguishedName)"
 # ------------------------------------------------------ #
 
 $Consonants = 'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z','ch','ck','sh'
