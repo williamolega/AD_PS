@@ -16,15 +16,15 @@ function New-RandomName {
     # Randomizes name length
     $length = Get-Random -Minimum $MinLength -Maximum ($MaxLength + 1)
 
-    $chars  = New-Object System.Collections.Generic.List[char]
+    $chars  = New-Object System.Collections.Generic.List[string]
 
     for ($i = 0; $i -lt $length; $i++) {
         if ($i % 2 -eq 0) {
             # even number → consonant
-            $chars.Add($Consonants[Get-Random -Minimum 0 -Maximum $Consonants.Count])
+            $chars.Add($Consonants[(Get-Random -Minimum 0 -Maximum $Consonants.Count)])
         } else {
             # odd number → vowel
-            $chars.Add($Vowels[Get-Random -Minimum 0 -Maximum $Vowels.Count])
+            $chars.Add($Vowels[(Get-Random -Minimum 0 -Maximum $Vowels.Count)])
         }
     }
 
