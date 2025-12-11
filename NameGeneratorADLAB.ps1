@@ -40,8 +40,6 @@ for ($i = 1; $i -le $NUMBER_OF_ACCOUNTS_TO_CREATE; $i++) {
     $lastName  = New-RandomName
     $username  = "$firstName.$lastName"
 
-    Write-Host "Creating user: $username" -BackgroundColor Black -ForegroundColor Orange
-
     New-ADUser -AccountPassword       $SecurePassword `
                -GivenName             $firstName `
                -Surname               $lastName `
